@@ -1,4 +1,4 @@
 #!/usr/bin/php
 <?php
-print("Hello World")
+print("Hello World\n");
 ?>
