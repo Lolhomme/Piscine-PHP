@@ -14,7 +14,8 @@ if ($argc < 2)
 $splitted = split_it($argv[1]);
 if (count($splitted))
 {
-    foreach(array_splice($splitted, 1) as $element)
+    $t = array_splice($splitted, 1)
+    foreach($t as $element)
     {
         echo $element." ";
     }
