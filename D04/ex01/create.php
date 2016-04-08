@@ -26,7 +26,6 @@
 
 	$authentication[$largest_key + 1]["login"] = $_POST["login"];
 	$authentication[$largest_key + 1]["passwd"] = hash("whirlpool", $_POST["passwd"]);
-	#var_dump($authentication);
 	@mkdir($serialized_path);
 	file_put_contents($serialized_file, serialize($authentication));
 	echo "OK\n";
