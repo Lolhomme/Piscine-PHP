@@ -6,6 +6,7 @@ function change_pw($tab, $pass)
 	$i = 0;
 	foreach($tab as $login)
 	{
+		if (is_array($login))
 		foreach($login as $key => $value)
 		{
 			if ($e == 1)

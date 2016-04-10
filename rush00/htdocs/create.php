@@ -9,15 +9,13 @@ function login_exist($tab)
 {
 	foreach ($tab as $login)
 	{
-		print_r($login);
-		echo PHP_EOL;
+		if (is_array($login))
 		foreach ($login as $log)
 		{
 			if ($log == $_POST['login'])
 				return (2);
 		}
 	}
-	die();
 	return (0);
 }
 

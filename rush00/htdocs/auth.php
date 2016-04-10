@@ -6,6 +6,7 @@ function auth($login, $passwd)
 	$e = 0;
 	foreach($tab as $log)
 	{
+		if (is_array($log))
 		foreach($log as $key => $value)
 		{
 			if ($e == 1)

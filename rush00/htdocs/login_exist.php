@@ -6,6 +6,7 @@ function login_exist($tab, $user)
 		return (-1);
 	foreach ($tab as $login)
 	{
+		if (is_array($login)) 
 		foreach ($login as $log)
 		{
 			if ($log == $user)
