@@ -13,7 +13,7 @@ if (!$_SESSION["loggued_on_user"])
 	<link rel="stylesheet" type="text/css" href="css/user.css">
 	<script>
 		function confirm_del(){
-			confirm("Etes-vous sur de vouloir supprimer votre compe ?");
+			confirm("Etes-vous sur de vouloir supprimer votre compte ?");
 		}
 	</script>
 </head>
@@ -30,19 +30,29 @@ if (!$_SESSION["loggued_on_user"])
 		<div id="panel"></div>
 		<div id="content">
 			<div id="about">
-				<h2>Détails du compte</h2>
-				<p>Identifiant: <?php session_start(); echo $_SESSION["loggued_on_user"]  ?>   <br>
-				<form action="modif.php" method="post">
-					Identifiant <br> 
-					<input type="text" name="login">
+				<h2>Parametres du compte</h2><br>
+					<fieldset>	
+						<legend>Changer de mot de passe</legend>
+						<form action="modif.php" method="post">
+							<br>
+							Ancien mot de passe<br>
+							<input type="password" name="oldpw"><br>
+							Nouveau mot de passe<br>
+							<input type="password" name="newpw"><br>
+							Confirmation du nouveau mot de passe<br>
+							<input type="password" name="newpw2"><br>
+							<button type="submit" name="submit" value="change_pw">Changer votre mot de passe</button><br>
+					</fieldset>
 					<br>
-					Ancien mot de passe<br>
-					<input type="password" name="oldpw">
+					<fieldset>
+					<legend>Supprimer votre compte</legend>
+					Identifiant<br>
+					<input type="text" name="login"><br>
 					<br>
-					Nouveau mot de passe<br>
-					<input type="password" name="newpw">
-					<input type="submit" name="submit" value="Changer votre mot de passe">
-					<button type="submit" name ="submit" value="delete" >Supprimer votre compte</button> 
+					Mot de passe<br>
+					<input type="password" name="oldpw"><br>
+					<button type="submit" name="submit" value="delete" onclick="confirm_del()">Confirmer</button> 
+					</fieldset>
 				</form>
 			</div>
 		</div>

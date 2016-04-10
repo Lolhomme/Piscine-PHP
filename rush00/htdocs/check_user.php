@@ -10,7 +10,7 @@ else
 		if (login($_POST[login], $_POST[passwd]) == 2)
 			header('Location: admin/admin.php');
 		else if (login($_POST[login], $_POST[passwd]) == 3)
-			header('Location: user.php');
+			header('Location: index.php');
 		else
 			header('Location: index.php');
 	}

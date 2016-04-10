@@ -14,7 +14,7 @@ if (!$_SESSION[admin])
 	<link rel="stylesheet" type="text/css" href="../css/admin.css">
 	<script>
 		function confirm_del(){
-			confirm("Etes-vous sur de vouloir supprimer l'utilisateur $n ?");
+			confirm("Etes-vous sur de vouloir supprimer l'utilisateur ?");
 		}
 	</script>
 </head>

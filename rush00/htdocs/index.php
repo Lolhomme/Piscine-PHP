@@ -49,18 +49,25 @@
 				</div>
 		<?php endif ?>
 		<?php if ($_SESSION['loggued_on_user']) : ?>
-				<div id="logout">
-					<form  method="POST" action="logout.php">
-						<input class="button" type="submit" name="deconnexion" value="logout">
-					</form>
-				</div>
+				<div id="form">
+                    <div>
+                        <form method="post" action="user.php">
+                            <input class="button" type="submit" name="Account" value="Mon compte">
+                        </form>
+                    </div>
+                    <div id="logout">
+                        <form  method="POST" action="logout.php">
+                            <input class="button" type="submit" name="deconnexion" value="Se deconnecter">
+                        </form>
+                    </div>
+                </div>
 		<?php endif ?>
 	</div>
 	<div id="main">
         <div id="menu">
             <form>
                 <ul>
-                    <li><a href="./index.php?cat=base_fr">Gourmandise francaise</a></li>
+                    <li><a href="./index.php?cat=base_fr">Gourmandises francaises</a></li>
                     <li><a href="./index.php?cat=base_asie">Delices d'Asie</a></li>
                     <li><a href="./index.php?cat=base_desserts">Desserts</a></li>
                 </ul>
@@ -71,8 +78,6 @@
             <ul>
                 <form>
                     <?php
-                        //print_r($_SESSION);
-						//print_r($_SESSION['tmp']);
                         $tab = unserialize(file_get_contents("../private/passwd"));
                         $i = login_exist($tab, $_SESSION['loggued_on_user']);
                         if ($i > 0)

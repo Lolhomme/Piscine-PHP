@@ -1,4 +1,4 @@
-<?php
+user<?php
 
 if (!file_exists("../private"))
 {

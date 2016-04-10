@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/admin.css">
 	<script>
 		function confirm_del(){
-			confirm("Etes-vous sur de supprimer le produit $n ?");
+			confirm("Etes-vous sur de supprimer le produit ?");
 		}
 	</script>
 </head>

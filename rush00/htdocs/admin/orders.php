@@ -15,10 +15,10 @@ $nb_order;
 	<link rel="stylesheet" type="text/css" href="../css/admin.css">
 	<script>
 		function valid(){
-			confirm("Valider la commande de $n produits?");
+			confirm("Valider la commande ?");
 		}
 		function confirm_del(){
-			confirm("Etes-vous sur de vouloir supprimer la commande $n ?");
+			confirm("Etes-vous sur de vouloir supprimer la commande ?");
 		}
 	</script>
 </head>
