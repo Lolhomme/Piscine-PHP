@@ -22,7 +22,7 @@ function change_pw($tab, $pass)
 						return (3);
 					}
 					else
-					{	
+					{
 						$tab[$i][passwd] = hash('whirlpool', $_POST[newpw]);
 						file_put_contents("../private/passwd",serialize($tab));
 						return (2);
@@ -52,25 +52,23 @@ if ($_POST[delete_user] == "Supprimer l'utilisateur" && $_POST[login])
 else if ((!$_POST[login] || !$_POST[oldpw] || !$_POST[newpw] || !$_POST[submit]) && $_POST[submit] != "delete")
 {
 	$error = "yes";
-	// || ($_POST[submit] != "Changer votre mot de passe" && $_POST[submit] != "delete"));
-	echo "ERROR\n";
 }
-if ($_POST[login] != $_SESSION[login]) // nouveau
+if ($_POST[login] != $_SESSION[login])
 	header('Location: index.php');
 if ($_POST[login] == "admin")
-	header('Location: admin/admin.php'); // si temps mettre cant delete admin //
-else if ($error = "no") // il ya = au lieu de == bizarre
+	header('Location: admin/admin.php');
+else if ($error = "no")
 {
 	$tab = unserialize(file_get_contents("../private/passwd"));
 	$pass = hash('whirlpool', $_POST['oldpw']);
 	$res = change_pw($tab, $pass);
 	if ($res > 1 && $res < 4)
-		header('Location: index.php'); // si temps mettre succes mot de passe changed //
+		header('Location: index.php');
 	else if ($res == 4)
-		header('Location: admin/admin.php'); // si temps mettre succes mot de passe changed //
+		header('Location: admin/admin.php');
 	else if ($res == 5)
 		header('Location: admin/manage_user.php');
 	else
-		header('Location: user.php'); // si temps mettre 
+		header('Location: user.php');
 }
 ?>

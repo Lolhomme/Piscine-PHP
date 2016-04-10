@@ -9,17 +9,20 @@ function login_exist($tab)
 {
 	foreach ($tab as $login)
 	{
+		print_r($login);
+		echo PHP_EOL;
 		foreach ($login as $log)
 		{
 			if ($log == $_POST['login'])
 				return (2);
 		}
 	}
+	die();
 	return (0);
 }
 
 if ((!$_POST[login] || !$_POST[passwd]) && $_POST["register"] != "Se connecter")
-	header('Location: register.php'); // si temps, mettre message user doit remplir 2 champs //
+	header('Location: register.php');
 else
 {
 	if ($_POST[passwd] == $_POST[confirmation])
@@ -35,9 +38,9 @@ else
 			header('Location: index.php');
 		}
 		else
-			header('Location: register.php'); // si temps, mettre message, user existe //
+			header('Location: register.php');
 	}
 	else
-		header('Location: register.php'); // si temps mettre message passwd et confirmation ne match pas //
+		header('Location: register.php');
 }
 ?>

@@ -1,5 +1,4 @@
 <?php
-include '../unserialize.php';
 include '../functions.php';
 session_start();
 if (!$_SESSION['admin'])
@@ -12,8 +11,8 @@ $nb_order;
 	<meta charset="UTF-8">
 	<title>Yummy</title>
 	<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="../../css/general.css">
-	<link rel="stylesheet" type="text/css" href="../../css/admin.css">
+	<link rel="stylesheet" type="text/css" href="../css/general.css">
+	<link rel="stylesheet" type="text/css" href="../css/admin.css">
 	<script>
 		function valid(){
 			confirm("Valider la commande de $n produits?");

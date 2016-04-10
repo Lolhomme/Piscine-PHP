@@ -9,8 +9,8 @@ if (!$_SESSION[admin])
 	<meta charset="UTF-8">
 	<title>Yummy</title>
 	<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="../../css/general.css">
-	<link rel="stylesheet" type="text/css" href="../../css/admin.css">
+	<link rel="stylesheet" type="text/css" href="../css/general.css">
+	<link rel="stylesheet" type="text/css" href="../css/admin.css">
 	<script>
 		function confirm_del()
 		{

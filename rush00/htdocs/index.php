@@ -25,7 +25,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-		
+
 	<title>Yummy</title>
 	<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/general.css">
@@ -112,27 +112,6 @@
 			}
             echo("</div>");
 		?>
-        <!---<div id="catalog">
-            <div class="col5">
-                <img class="food" src="Ressources/asie/pho.jpg">
-                <form method="POST" action="order.php">
-                    <input type="image" class="buy" src="Ressources/fork_knife.png" title="buy food" name="$var">
-                </form>
-            </div>
-            <div class="col5">
-            </div>
-            <div class="col5"></div>
-            <div class="col5"></div>
-            <div class="col5"></div>
-            <div class="col5"></div>
-            <div class="col5"></div>
-            <div class="col5"></div>
-            <div class="col5"></div>
-            <div class="col5"></div>
-            <div class="col5"></div>
-            <div class="col5"></div>
-            <div class="col5"></div>
-        </div> --->
     </div>
 </div>
 </body>

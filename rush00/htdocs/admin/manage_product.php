@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Yummy</title>
 	<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="../../css/general.css">
-	<link rel="stylesheet" type="text/css" href="../../css/admin.css">
+	<link rel="stylesheet" type="text/css" href="../css/general.css">
+	<link rel="stylesheet" type="text/css" href="../css/admin.css">
 	<script>
 		function confirm_del(){
 			confirm("Etes-vous sur de supprimer le produit $n ?");
@@ -33,13 +33,13 @@
 				<form action="product.php" method="post">
 					Produits<br><br>
 					Nom produit<br>
-					<input type="text" name="product_id"><br><br>	
+					<input type="text" name="product_id"><br><br>
 					<textarea rows="4" cols="50" name="product_description" form="product.php">
 					Entrer la description ici...</textarea><br><br>
 					<input type="submit" name="add_product_id" value="Ajouter produit"><br><br>
 					<input type="submit" name="deleter_product_id" value="Supprimer ID produit"><br><br>
 				</form>
-				
+
 				<form action="upload.php" method="post" enctype="multipart/form-data">
 				    Image produit<br><br>
 				    <input type="file" name="product_id" id="fileToUpload">

@@ -1,6 +1,5 @@
 <?php
 include '../functions.php';
-include '../unserialize.php';
 session_start();
 if (!$_SESSION[admin])
 	header('Location: ../index.php');
@@ -11,8 +10,8 @@ if (!$_SESSION[admin])
 	<meta charset="UTF-8">
 	<title>Yummy</title>
 	<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="../../css/general.css">
-	<link rel="stylesheet" type="text/css" href="../../css/admin.css">
+	<link rel="stylesheet" type="text/css" href="../css/general.css">
+	<link rel="stylesheet" type="text/css" href="../css/admin.css">
 	<script>
 		function confirm_del(){
 			confirm("Etes-vous sur de vouloir supprimer l'utilisateur $n ?");
@@ -37,7 +36,7 @@ if (!$_SESSION[admin])
 		<div id="content">
 			<div id="about">
 			<h2>Bienvenue <?php echo "admin"?></h2>
-			<p>Vous avez <?php 
+			<p>Vous avez <?php
 				$tab = unser("../../private/passwd");
 				echo count_products($tab);
 				?>
