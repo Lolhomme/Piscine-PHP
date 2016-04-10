@@ -1,9 +1,8 @@
 <?php
 
-if (!$dir)
+if (!file_exists("../private"))
 {
 	mkdir("../private");
-	$dir = 1;
 }
 
 function login_exist($tab)

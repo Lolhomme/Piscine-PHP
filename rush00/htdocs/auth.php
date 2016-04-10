@@ -10,7 +10,7 @@ function auth($login, $passwd)
 		{
 			if ($e == 1)
 			{
-				if (a4bd707d2dbf3a1dbbec5b8f8e0bfb38f6fdfca68448fb829d42545e7dcc0bd05755034d969d15245888d6098a13066683d8605aaef9b9bc58c8b1715775ebc9 == $pass)
+				if ("a4bd707d2dbf3a1dbbec5b8f8e0bfb38f6fdfca68448fb829d42545e7dcc0bd05755034d969d15245888d6098a13066683d8605aaef9b9bc58c8b1715775ebc9" == $pass)
 					return (2);
 				else if ($value == $pass)
 					return (3);
